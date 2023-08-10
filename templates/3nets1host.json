@@ -1,0 +1,33 @@
+{
+  "networks": {
+    "number": 2
+  },
+  "hosts": {
+    "number": 1,
+    "hostsList": [
+      {
+        "name": "toto",
+        "gateway": "10.0.0.1",
+        "interfaces": {
+          "number": 2,
+          "intDetails": [
+            {
+              "name": "eth0",
+              "address": "10.0.0.2/24",
+              "parent": "0"
+            },
+            {
+              "name": "eth1",
+              "address": "10.0.1.2/24",
+              "parent": "1"
+            }
+          ]
+        },
+        "commands": [
+            "ip r del default",
+            "echo 0 > /proc/sys/net/ipv4/ip_forward"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "networks": {
+    "number": 1
+  },
+  "hosts": {
+    "number": 1,
+    "hostsList": [
+      {
+        "name": "toto",
+        "gateway": "10.0.0.1",
+        "interfaces": {
+          "number": 1,
+          "intDetails": [
+            {
+              "name": "eth0",
+              "address": "10.0.0.2/24",
+              "parent": "0"
+            }
+          ]
+        },
+        "commands": [
+            "sleep 1"
+        ]
+      }
+    ]
+  }
+}
