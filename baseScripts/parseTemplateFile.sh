@@ -39,7 +39,7 @@ do
         arguments=" "$ipAddress" "$ipMask" "$parent
         allArguments+=$arguments
     done
-    ./baseScripts/createNewHost.sh $hostName $numberOfInterfaces $gateway $allArguments >/dev/null 2>&1
+    ./baseScripts/createNewHost.sh $hostName $numberOfInterfaces $gateway $allArguments # >/dev/null 2>&1
 
     # On execute les commandes s'il y en a
     commands=$(cat $fileToParse | 

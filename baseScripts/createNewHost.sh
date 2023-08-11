@@ -19,14 +19,6 @@ createNewHost.sh hostName nbInterfaces gateway ip1 mask1 parent1 [ip2 mask2 pare
    exit 1
 fi
 
-# Si le nombre d'arguments est trop grand
-if [ $# -gt 9 ]
-then
-   echo "Il y a trop d'arguments, il peut y en avoir 9 au maximum :
-createNewHost.sh hostName nbInterfaces gateway ip1 mask1 parent1 [ip2 mask2 parent2...]" 
-   exit 1
-fi
-
 # Si le hostName n'est pas une chaine
 if [ ! -n $hostName ]
 then

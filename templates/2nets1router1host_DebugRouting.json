@@ -1,0 +1,72 @@
+{
+  "networks": {
+    "number": 3
+  },
+  "hosts": {
+    "number": 3,
+    "hostsList": [
+      {
+        "name": "routeur1",
+        "gateway": "10.0.0.1",
+        "interfaces": {
+          "number": 3,
+          "intDetails": [
+            {
+              "name": "eth0",
+              "address": "10.0.0.254/24",
+              "parent": "0"
+            },
+            {
+              "name": "eth1",
+              "address": "10.0.1.254/24",
+              "parent": "1"
+            },
+            {
+              "name": "eth2",
+              "address": "10.0.2.254/24",
+              "parent": "2"
+            }
+          ]
+        },
+        "commands": [
+            "echo 1 > /proc/sys/net/ipv4/ip_forward",
+            "iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE"
+        ]
+      },
+      {
+        "name": "host1",
+        "gateway": "10.0.1.254",
+        "interfaces": {
+          "number": 1,
+          "intDetails": [
+            {
+              "name": "eth0",
+              "address": "10.0.1.4/24",
+              "parent": "1"
+            }
+          ]
+        },
+        "commands": [
+            "sleep 1"
+        ]
+      },
+      {
+        "name": "host2",
+        "gateway": "10.0.2.253",
+        "interfaces": {
+          "number": 1,
+          "intDetails": [
+            {
+              "name": "eth0",
+              "address": "10.0.2.4/24",
+              "parent": "2"
+            }
+          ]
+        },
+        "commands": [
+            "sleep 1"
+        ]
+      }
+    ]
+  }
+}
