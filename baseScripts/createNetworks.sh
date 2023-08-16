@@ -39,7 +39,7 @@ status: Created
 locations:
 - none" > ./network_10.0.${i}_profile.yaml
             lxc network edit lxdbr${i} < ./network_10.0.${i}_profile.yaml
-            # rm ./network_10.0.${i}_profile.yaml
+            rm ./network_10.0.${i}_profile.yaml
         else
             network=$(echo ${!j} | cut -d "/" -f 1 | cut -d "\"" -f 2)
             networkWithMask=$(echo ${!j} | cut -d "\"" -f 2)
