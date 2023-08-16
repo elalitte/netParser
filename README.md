@@ -27,7 +27,18 @@ multiple interfaces)
 ```json
 {
   "networks": {
-    "number": 3
+    "number": 3,
+    "networksList": {
+      "numberOfIdentifiedNetworks": 2,
+      "networksAddresses": [
+        {
+          "address": "192.168.0.1/24"
+        },
+        {
+          "address": "192.168.1.1/24"
+        }
+      ]
+    }
   },
   "hosts": {
     "number": 3,
