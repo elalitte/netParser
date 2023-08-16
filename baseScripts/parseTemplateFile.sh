@@ -11,8 +11,16 @@
 fileToParse=$1
 
 # On cree les reseaux
-numberOfNetworks=$(cat $fileToParse | jq '.networks.number')
-./baseScripts/createNetworks.sh ${numberOfNetworks}
+numberOfNetworks=$(cat $fileToParse | jq ".networks.number")
+numberOfAddressedNetworks=$(cat $fileToParse |
+    jq ".networks.networksList.numberOfIdentifiedNetworks")
+networkAddresses=""
+for i in $(seq 0 $(( $numberOfAddressedNetworks )))
+do
+    networkAddresses+=" "$(cat $fileToParse |
+        jq ".networks.networksList.networksAddresses[${k}].address")
+done
+./baseScripts/createNetworks.sh ${numberOfNetworks} ${networkAddresses}
 
 # On cree les machines
 # On boucle sur les hotes

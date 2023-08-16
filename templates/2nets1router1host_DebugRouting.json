@@ -1,6 +1,17 @@
 {
   "networks": {
-    "number": 3
+    "number": 3,
+    "networksList": {
+      "numberOfIdentifiedNetworks": 2,
+      "networksAddresses": [
+        {
+          "address": "192.168.0.1/24"
+        },
+        {
+          "address": "192.168.1.1/24"
+        }
+      ]
+    }
   },
   "hosts": {
     "number": 3,
@@ -18,12 +29,12 @@
             },
             {
               "name": "eth1",
-              "address": "10.0.1.254/24",
+              "address": "192.168.0.254/24",
               "parent": "1"
             },
             {
               "name": "eth2",
-              "address": "10.0.2.254/24",
+              "address": "192.168.1.254/24",
               "parent": "2"
             }
           ]
@@ -35,13 +46,13 @@
       },
       {
         "name": "host1",
-        "gateway": "10.0.1.254",
+        "gateway": "192.168.0.254",
         "interfaces": {
           "number": 1,
           "intDetails": [
             {
               "name": "eth0",
-              "address": "10.0.1.4/24",
+              "address": "192.168.0.4/24",
               "parent": "1"
             }
           ]
@@ -52,13 +63,13 @@
       },
       {
         "name": "host2",
-        "gateway": "10.0.2.253",
+        "gateway": "192.168.1.253",
         "interfaces": {
           "number": 1,
           "intDetails": [
             {
               "name": "eth0",
-              "address": "10.0.2.4/24",
+              "address": "192.168.1.4/24",
               "parent": "2"
             }
           ]
