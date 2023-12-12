@@ -11,6 +11,12 @@ aren't absolute ones.
 You'll only need to have a working LXC/LXD on your machine to make netparser work.
 All scripts are based on basic bach commands.
 
+## Installation
+```bash
+git clone https://github.com/elalitte/netParser.git
+cd netparser
+```
+
 ## Examples
 If you want to start the 3nets3hosts.json template, you should use the next command 
 and be sure that you are in the root directory.
