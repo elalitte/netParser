@@ -7,6 +7,10 @@ You can parse them using the parseTemplateFile.sh placed in the baseScripts dire
 But take care, you should send the command from the root directory as links in files
 aren't absolute ones.
 
+## Prerequisite
+You'll only need to have a working LXC/LXD on your machine to make netparser work.
+All scripts are based on basic bach commands.
+
 ## Examples
 If you want to start the 3nets3hosts.json template, you should use the next command 
 and be sure that you are in the root directory.
