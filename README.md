@@ -9,11 +9,13 @@ aren't absolute ones.
 
 ## Prerequisite
 You'll only need to have a working LXC/LXD on your machine to make netparser work.
-All scripts are based on basic bach commands.
+You'll also need jq to work, I added the apt command for debian like systems.
+All scripts are based on basic bash commands.
 
 ## Installation
 ```bash
 git clone https://github.com/elalitte/netParser.git
+apt install -y jq
 cd netparser
 ```
 
