@@ -1,3 +1,3 @@
 #!/bin/bash
-/root/scripts/stopAndDestroyAllContainers.sh
-/root/scripts/destroyAllNetworks.sh
+./baseScripts/stopAndDestroyAllContainers.sh
+./baseScripts/destroyAllNetworks.sh
